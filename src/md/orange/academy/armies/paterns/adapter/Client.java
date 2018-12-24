@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package md.orange.academy.armies.main;
+package md.orange.academy.armies.paterns.adapter;
 
 import md.orange.academy.armies.soldier.AllyCommander;
 import md.orange.academy.armies.soldier.Soldier;
@@ -12,17 +12,15 @@ import md.orange.academy.armies.soldier.Soldier;
  *
  * @author Victor Zaitev
  */
-public class Main {
+public class Client {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here.
+    private final ISoldier<Soldier> iSoldier;
 
-        Soldier soldier = new AllyCommander();
-        
-
+    public Client(ISoldier<Soldier> iSoldier) {
+        this.iSoldier = iSoldier;
     }
 
+    public void attack(Soldier soldier) {
+        iSoldier.attack(soldier);
+    }
 }
