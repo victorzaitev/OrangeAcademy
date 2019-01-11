@@ -13,6 +13,11 @@ import md.orange.academy.armies.interfaces.segregation.Commander;
  */
 public class AllyCommander extends Soldier implements Commander {
 
+    public AllyCommander() {
+    }
+
+    
+    
     @Override
     public void attack() {
         System.out.println("AllyCommander acction Attack ");
